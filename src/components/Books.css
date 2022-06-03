@@ -16,6 +16,12 @@
   margin-right: 15px;
 }
 
+.main-area ul li {
+  border-right: 2px solid #1f7199;
+  padding-right: 10px;
+  margin-top: 12px;
+}
+
 .nav-content li:nth-child(2) {
   color: black;
   font-size: 18px;
@@ -63,12 +69,6 @@
   list-style: none;
   display: flex;
   gap: 10px;
-}
-
-.main-area ul li {
-  border-right: 2px solid var(--azure);
-  padding-right: 10px;
-  margin-top: 12px;
 }
 
 .main-area ul li:nth-child(3) {
