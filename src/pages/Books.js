@@ -1,40 +1,25 @@
-import React, { Component } from 'react';
-import '../components/Books.css';
-import Forms from '../components/Forms';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import Book from '../components/Book';
+import Form from '../components/Forms';
 
-class Books extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <>
-        <div className="card">
-          <div className="main-area">
-            <span>Action</span>
-            <h1>The hunger games</h1>
-            <p>Unseen Content</p>
-            <ul>
-              <li>Corn</li>
-              <li>Corn</li>
-              <li>Corn</li>
-            </ul>
-          </div>
-
-          <div className="main-area2">
-            <h4>64%</h4>
-          </div>
-          <div className="main-area3">
-            <h4>Current Chapter</h4>
-            <h5>Chapter 17</h5>
-            <button type="button">UPDATE CHAPTER</button>
-          </div>
-        </div>
-        <Forms />
-      </>
-    );
-  }
-}
+const Books = () => {
+  const data = useSelector((state) => state.books);
+  return (
+    <div className="books-container">
+      {data.map((e) => (
+        <Book
+          key={e.id}
+          id={e.id}
+          title={e.title}
+          author={e.author}
+          genre={e.category}
+          currentChapter={e.currentChapter}
+          progress={e.progress}
+        />
+      ))}
+      <Form />
+    </div>
+  );
+};
 export default Books;
