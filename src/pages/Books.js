@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './Books.css';
-import Forms from './Forms';
+import '../components/Books.css';
+import Forms from '../components/Forms';
 
 class Books extends Component {
   constructor(props) {
