@@ -20,7 +20,7 @@
 
 ## Install Dependancies
 
-run : `npm install`
+run : `npm install` or `npm install --force`
 
 ### Build the app
 
